@@ -8,10 +8,10 @@ option {
     align-items: center;
 }
 .content-wrapper {
-    background: #D19F68;
+    background: #009246;
 }
 #btn-agendar {
-    background: #D19F68;
+    background: #009246; 
 }
 
 .btn-formulario {
@@ -19,24 +19,24 @@ option {
     height: 30px;
     border-radius: 4px;
     color: #ffff;
-    background-color: #D19F68;
+    background-color: #CE2B37;
     border: nonE;
 }
 
 .btn-formulario:hover {
-    border: 1px solid black;
+    border: 1px solid #CE2B37;
 }
 
 #bg-login{
-    background-color: #bd8c58;
+    background-color: #035029;
 }
 
 #navbarzin {
-    background-color: #7A2988;
+    background-color: #CE2B37;
 }
 
 #item-nav{
-    color: red;
+    color: #CE2B37;
 }
 
 .sidebar .nav .nav-item .nav-link .menu-title {
@@ -64,7 +64,7 @@ option {
     text-transform: uppercase;
 }
 .navbar .navbar-menu-wrapper {
-    background: #7A2988;
+    background: #CE2B37;
     
 }
 
@@ -126,7 +126,7 @@ option {
 
 @media(max-width: 390px) {
     .navbar .navbar-brand-wrapper {
-        background: #7A2988;
+        background: #CE2B37;
         height: 60px;
        
     }

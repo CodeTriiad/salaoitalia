@@ -32,6 +32,7 @@
                   <input type="password" name="senha" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Senha">
                 </div>
                 <div class="mt-3">
+                <div id="mensagem-erro" style="color: red;"><h5> Login ou senha incorreta</div>
                   <a href=""><button class="btn-formulario btn-danger" type="submit" name="login">Entrar</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">

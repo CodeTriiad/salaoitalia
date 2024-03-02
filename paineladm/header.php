@@ -21,7 +21,7 @@ session_start();
       <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
       <link rel="stylesheet" href="css/vertical-layout-light/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-      <link rel="shortcut icon" href="images/favicon.png" />
+      <link rel="shortcut icon" href="images/scissors-svgrepo-com.svg"/>
       <link rel="stylesheet" href="css/administracao.css">
     </head>
     <body class="with-welcome-text">
@@ -37,10 +37,10 @@ session_start();
             </div>
             <div>
               <a class="navbar-brand brand-logo" href="index.html">
-                <img src="images/logo-semfundo.svg" alt="logo" />
+                <img src="images/scissors-svgrepo-com.svg" alt="logo" />
               </a>
               <a class="navbar-brand brand-logo-mini" href="index.html">
-                <img src="images/logo-pequeno.svg" alt="logo" />
+                <img src="images/scissors-svgrepo-com.svg" alt="logo" />
               </a>
             </div>
           </div>

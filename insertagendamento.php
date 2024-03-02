@@ -22,8 +22,7 @@ if (isset($_POST['agendar'])) {
     // Verificar se o horário está ocupado
     $verificarDisponibilidade = "SELECT * FROM AGENDAMENTO
     WHERE DATA = '$dia'
-	AND HORA LIKE '%$horario%'
-	AND BARBEIRO = '$barber' ";
+	AND HORA LIKE '%$horario%'";
     $resultado = mysqli_query($mysqli_connection, $verificarDisponibilidade);
     if (mysqli_num_rows($resultado) > 0) {
         
@@ -37,8 +36,8 @@ if (isset($_POST['agendar'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Agendamento</title>
   <link rel="stylesheet" href="paineladm/css/vertical-layout-light/style.css">
-  <link rel="shortcut icon" href=paineladm/images/favicon.png/>
-  <link rel="stylesheet" href="paineladm/css/classe.css">
+  <link rel="shortcut icon" href="paineladm/images/scissors-svgrepo-com.svg"/>
+  <link rel="stylesheet" href="paineladm/css/agendamento.css">
 </head>
 
 <body>
@@ -49,10 +48,10 @@ if (isset($_POST['agendar'])) {
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="paineladm/images/logo-dark.svg" alt="logo">
+              <!-- <img src="paineladm/images/logo-dark.svg" alt="logo"> -->
               </div>
-              <h4>Seja bem vindo</h4>
-              <h6 class="fw-light">Agende o seu horário </h6>
+              <h4>Salão Italia 🟢</h4>
+              <h6 class="fw-light">Seja bem vindo!</h6>
                 <form method="" action="agendamento.php" class="pt-3">
                     <table class="table table-striped">
                         <thead>
@@ -62,27 +61,25 @@ if (isset($_POST['agendar'])) {
                         <tr>
                             <th>DATA</th>
                             <th>HORA</th>
-                            <th>BARBEIRO</th>
                         </tr>
                         </thead>
                         <?php
                         $verifica = mysqli_query($mysqli_connection, "SELECT SERVICO,DATA,HORA,BARBEIRO 
                         FROM AGENDAMENTO 
                         WHERE DATA = '$dia' 
-                        AND STATUS IN ('AGENDADO', 'PENDENTE') ORDER BY HORA") ;
+                        AND STATUS IN ('AGENDADO', 'PENDENTE') ORDER BY HORA ASC") ;
                         if(($verifica ) AND ($verifica->num_rows != 0))
                             while($row_servico = mysqli_fetch_assoc($verifica)){{
                                 echo '<tr>';
                                 echo '<td>'. implode('/', array_reverse(explode('-',$row_servico['DATA']))) .'</td>';
                                 echo '<td>'. $row_servico['HORA'] .'</td>';
-                                echo '<td>'. $row_servico['BARBEIRO'] .'</td>';
                                 echo '<tr>';
                             
                             }
                         } 
                         ?>
                     </table>
-                    <a href="agendamento"> <button name="" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" id="btn-agendar">VOLTAR</button>
+                    <a href="agendamento"> <button name="" class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn" id="btn-agendar">VOLTAR</button>
                 </form>
             </div>
           </div>
@@ -95,7 +92,7 @@ if (isset($_POST['agendar'])) {
         // Horário está disponível, prosseguir com o agendamento
         $barber = ltrim($barbeiro);
         $SQL = "INSERT INTO AGENDAMENTO (ID, NOME, TELEFONE, SERVICO, DATA, HORA, STATUS, BARBEIRO, HORA_SOLICITACAO) VALUES (
-            NULL, '$name','$telefone', '$servicos', '$dia', '$horario', 'PENDENTE', '$barber', NOW()
+            NULL, '$name','$telefone', '$servicos', '$dia', '$horario', 'PENDENTE', 'Salao Italia', NOW()
         )";
         mysqli_query($mysqli_connection, $SQL);
 
@@ -106,7 +103,7 @@ if (isset($_POST['agendar'])) {
         mysqli_query($mysqli_connection, $FK);
         //envioEmail(emailBarbeiro(), 'Barbeiro');
         // Redirecionar ou exibir uma mensagem de sucesso, se necessário
-        header('Location:https://barbearia.codetriad.net/agendamentofeito');
+        header('Location:https://salaoitalia.codetriad.net/agendamentofeito');
 }
 }
 ?>

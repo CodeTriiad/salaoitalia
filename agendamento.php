@@ -14,7 +14,7 @@ include_once('paineladm/config/conexao.php');
   <title>Agendamento - Salão Italia</title>
   <link rel="stylesheet" href="paineladm/css/vertical-layout-light/style.css">
   <link rel="shortcut icon" href="paineladm/images/scissors-svgrepo-com.svg"/>
-  <link rel="stylesheet" href="paineladm/css/classe.css">
+  <link rel="stylesheet" href="paineladm/css/agendamento.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
@@ -50,7 +50,7 @@ include_once('paineladm/config/conexao.php');
                       $QUERY  = mysqli_query($mysqli_connection, $SQL);
                   ?>
 
-                  <select name="servicos" class="input-box" required style="color: black;">
+                  <select name="servicos" class="input-box w-50" required style="color: black;">
                     <?php while($servicos = mysqli_fetch_array($QUERY)){ ?>
                     <option value="<?=  $servicos['SERVICOS'] ?>" style="color: black;"><?php echo strtoupper($servicos['SERVICOS']) . "<b>ㅤㅤ|ㅤㅤ 𝙍💲" . $servicos['VALOR'];?>
                     <?php } ?>
@@ -92,7 +92,7 @@ include_once('paineladm/config/conexao.php');
                   </div>
                 </div>
                 <div class="mt-3">
-                  <a href="insertagendamento"> <button name="agendar" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" id="btn-agendar">Agendar</button>
+                  <a href="insertagendamento"> <button name="agendar" class="btn btn-block btn-danger btn-lg font-weight-medium auth-form-btn" id="btn-agendar">Agendar</button>
                 </div>
                 <div class="my-2 d-flex justify-content-between align-items-center">
                 </div>

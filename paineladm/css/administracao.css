@@ -32,7 +32,7 @@ option {
 }
 
 #navbarzin {
-    background-color: #7A2988;
+    background-color: #CE2B37;
 }
 
 #item-nav{
@@ -64,13 +64,13 @@ option {
     text-transform: uppercase;
 }
 .navbar .navbar-menu-wrapper {
-    background: #7A2988;
+    background: #CE2B37;
 
     
 }
 
 .navbar .navbar-brand-wrapper {
-    background: #000000;
+    background: #F1F2F1;
            height: 60px;
    
 }
@@ -78,7 +78,7 @@ option {
 .sidebar-icon-only .navbar .navbar-brand-wrapper {
     width: 70px;
     padding-left: 1.625rem;
-    background: #000000;
+    background: #F1F2F1;
 }
 
 .sidebar-icon-only .sidebar .nav .nav-item .nav-link i.menu-icon {
@@ -127,7 +127,7 @@ option {
 
 @media(max-width: 390px) {
     .navbar .navbar-brand-wrapper {
-        background: #7A2988;
+        background: #CE2B37;
         height: 60px;
        
     }
@@ -135,7 +135,7 @@ option {
 
 @media(max-width: 900px) {
     .navbar .navbar-brand-wrapper {
-        background: #7A2988;
+        background: #CE2B37;
         height: 60px;
        
     }

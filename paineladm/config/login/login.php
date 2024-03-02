@@ -12,7 +12,7 @@
                 unset ($_SESSION['senha']);
                   echo"<script language='javascript' type='text/javascript'>
                   alert('Login e/ou senha incorretos');window.location
-                  .href='../../index';</script>";
+                  .href='../../failedlogin';</script>";
                   die();
               }else{
                 $_SESSION['user_id'] = $row['ID'];

@@ -11,10 +11,10 @@ option {
     align-items: center;
 }
 .content-wrapper {
-    background: #009246;
+    background: #035029;
 }
 #btn-agendar {
-    background: #009246;
+    background: #CE2B37;
 }
 .black-placeholder::placeholder {
     color: rgb(22, 22, 22);
@@ -28,7 +28,7 @@ option {
     height: 30px;
     border-radius: 4px;
     color: #ffff;
-    background-color: #009246;
+    background-color: #035029;
     border: nonE;
 }
 
@@ -41,7 +41,7 @@ option {
 }
 
 #navbarzin {
-    background-color: #009246;
+    background-color: #035029;
 }
 
 #item-nav{
@@ -73,7 +73,7 @@ option {
     text-transform: uppercase;
 }
 .navbar .navbar-menu-wrapper {
-    background: #7A2988;
+    background: #CE2B37;
     
 }
 
@@ -135,7 +135,7 @@ option {
 
 @media(max-width: 390px) {
     .navbar .navbar-brand-wrapper {
-        background: #7A2988;
+        background: #CE2B37;
         height: 60px;
        
     }
