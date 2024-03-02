@@ -11,9 +11,9 @@ include_once('paineladm/config/conexao.php');
  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Agendamento</title>
+  <title>Agendamento - Salão Italia</title>
   <link rel="stylesheet" href="paineladm/css/vertical-layout-light/style.css">
-  <link rel="shortcut icon" href=paineladm/images/favicon.png/>
+  <link rel="shortcut icon" href="paineladm/images/scissors-svgrepo-com.svg"/>
   <link rel="stylesheet" href="paineladm/css/classe.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
@@ -26,31 +26,23 @@ include_once('paineladm/config/conexao.php');
           <div class="col-lg-4 mx-auto">
             <div class="auth-form-light text-left py-5 px-4 px-sm-5">
               <div class="brand-logo">
-                <img src="paineladm/images/logo-dark.svg" alt="logo">
+               <!-- <img src="paineladm/images/scissors-svgrepo-com.svg" alt="logo" width="50" height="50"> -->
               </div>
-              <h4>Seja bem vindo</h4>
-              <h6 class="fw-light">Agende o seu horário </h6>
+              <h4>Seja bem vindo 🟢</h4>
+              <h6 class="fw-light">Agende o seu horário ⌚</h6>
               <form method="POST" action="insertagendamento" class="pt-3">
                 <div class="form-group">
-                  <input type="name" name="name" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Nome" required style="color: black;">
+                  <input type="name" name="name" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Nome🙍‍♂️" required style="color: black;">
                 </div>
                 <div class="form-group">
-                  <input type="number" name="telefone" class="form-control form-control-lg" placeholder="Telefone" id="field" mixlength="10" maxlength="13" pattern="([0-9])" required style="color: black;">
+                  <input type="number" name="telefone" class="form-control form-control-lg" placeholder="Telefone📱" id="field" mixlength="10" maxlength="13" pattern="([0-9])" required style="color: black;">
                 </div>
                 <div class="form-group" class="form-control form-control-lg">
                   <?php 
                       $SQL = "SELECT NOME FROM USUARIO WHERE ID >= 2 ORDER BY NOME";
                       $QUERY  = mysqli_query($mysqli_connection, $SQL);
                   ?>
-                      <select name="barbeiro" class="input-box" placeholder="Barbeiro" required style="color: black;">
-                  <?php
-                    while($barbeiro = mysqli_fetch_array($QUERY)){              
-                  ?>
-                    <option value="
-                        <?=  $barbeiro['NOME'] ?>"style="color: black;">
-                        <?php echo $barbeiro['NOME']; ?>
-                  <?php } ?>
-                  </select>
+
                 </div>
                 <div class="form-group" class="form-control form-control-lg">
                   <?php 
@@ -60,7 +52,7 @@ include_once('paineladm/config/conexao.php');
 
                   <select name="servicos" class="input-box" required style="color: black;">
                     <?php while($servicos = mysqli_fetch_array($QUERY)){ ?>
-                    <option value="<?=  $servicos['SERVICOS'] ?>" style="color: black;"><?php echo $servicos['SERVICOS'] . "<b>ㅤㅤ|ㅤㅤVALOR R$" . $servicos['VALOR'];?>
+                    <option value="<?=  $servicos['SERVICOS'] ?>" style="color: black;"><?php echo strtoupper($servicos['SERVICOS']) . "<b>ㅤㅤ|ㅤㅤ 𝙍💲" . $servicos['VALOR'];?>
                     <?php } ?>
                   </select>
                 </div>

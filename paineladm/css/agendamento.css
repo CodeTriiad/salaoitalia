@@ -11,10 +11,10 @@ option {
     align-items: center;
 }
 .content-wrapper {
-    background: #D19F68;
+    background: #009246;
 }
 #btn-agendar {
-    background: #D19F68;
+    background: #009246;
 }
 .black-placeholder::placeholder {
     color: rgb(22, 22, 22);
@@ -28,7 +28,7 @@ option {
     height: 30px;
     border-radius: 4px;
     color: #ffff;
-    background-color: #D19F68;
+    background-color: #009246;
     border: nonE;
 }
 
@@ -37,11 +37,11 @@ option {
 }
 
 #bg-login{
-    background-color: #bd8c58;
+    background-color: #CE2B37;
 }
 
 #navbarzin {
-    background-color: #7A2988;
+    background-color: #009246;
 }
 
 #item-nav{
