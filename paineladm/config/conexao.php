@@ -1,8 +1,8 @@
 <?php
 // database Connection
-$hostname = "193.203.175.32";
+$hostname = "localhost";
 $username = "u956686723_salaoitalia";
-$password = "LLzq#@vr1F+";
+$password = "oN~9wUEH/";
 $db =  "u956686723_salaoitalia";
 $mysqli_connection = new mysqli($hostname,$username,$password,$db);
 if($mysqli_connection->connect_error){
