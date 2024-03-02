@@ -40,7 +40,7 @@ session_start();
                           <button  class="btn btn btn-info btn-sm font-weight-medium auth-form-btn">FILTRAR </h4>
                        </form>
                          <?php
-                          if($email === "adm@codetriad.net"){
+                          if(emailBarbeiro() === "adm@codetriad.net"){
                           $verifica = mysqli_query($mysqli_connection, 
                           "SELECT ID, NOME,TELEFONE, SERVICO, DATA, HORA, 
                           STATUS,BARBEIRO, ENVIADO FROM AGENDAMENTO

@@ -22,7 +22,8 @@ if (isset($_POST['agendar'])) {
     // Verificar se o horário está ocupado
     $verificarDisponibilidade = "SELECT * FROM AGENDAMENTO
     WHERE DATA = '$dia'
-	AND HORA LIKE '%$horario%'";
+	  AND HORA LIKE '%$horario%'
+    AND STATUS IN ('AGENDADO', 'PENDENTE')";
     $resultado = mysqli_query($mysqli_connection, $verificarDisponibilidade);
     if (mysqli_num_rows($resultado) > 0) {
         
@@ -52,7 +53,7 @@ if (isset($_POST['agendar'])) {
               </div>
               <h4>Salão Italia 🟢</h4>
               <h6 class="fw-light">Seja bem vindo!</h6>
-                <form method="" action="agendamento.php" class="pt-3">
+                <form method="" action="agendamento" class="pt-3">
                     <table class="table table-striped">
                         <thead>
                         <div id="mensagem-erro" style="color: red;"><h3> HORARIOS INDISPONIVEIS</div>

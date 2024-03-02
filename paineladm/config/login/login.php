@@ -11,17 +11,13 @@
             if (mysqli_num_rows($query)<=0){
                 unset ($_SESSION['email']);
                 unset ($_SESSION['senha']);
-                  echo"<script language='javascript' type='text/javascript'>
-                  alert('Login e/ou senha incorretos');window.location
-                  .href='../../failedlogin';</script>";
+                  header("Location:../../failedlogin");
                   die();
               }else{
                 $_SESSION['user_id'] = $row['ID'];
                 $_SESSION['email'] = $email;
                 $_SESSION['senha'] = $senha;
                 $_SESSION['logged_in'] = true;
-                  echo"<script language='javascript' type='text/javascript'>
-                  alert('Login correto');</script>";
                   header("Location:../../administracao?data=$date");
                 }
             /*if($row == 1){
