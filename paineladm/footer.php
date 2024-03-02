@@ -30,11 +30,11 @@
             var hora = agora.getHours();
 
             if (hora >= 5 && hora < 12) {
-                saudacao = "Bom dia, <?php  nomeBarbeiro();?>";
+                saudacao = "Bom dia, <?php  nomeBarbeiro();?>🌕";
             } else if (hora >= 12 && hora < 18) {
-                saudacao = "Boa tarde, <?php  nomeBarbeiro();?>";
+                saudacao = "Boa tarde, <?php  nomeBarbeiro();?>🌓";
             } else {
-                saudacao = "Boa noite, <?php  nomeBarbeiro();?>";
+                saudacao = "Boa noite, <?php  nomeBarbeiro();?>🌑";
             }
 
           return saudacao;

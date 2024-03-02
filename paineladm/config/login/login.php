@@ -4,6 +4,7 @@
     // ========== LOGIN USERS ==========
     $email = $_POST['email'];
     $senha = md5($_POST['senha']);
+    $date = date("Y-m-d");
     if(isset($_POST['login'])){
             $query = mysqli_query($mysqli_connection, "SELECT * FROM USUARIO WHERE EMAIL = '$email' AND  SENHA = '$senha'");
             $row = mysqli_num_rows($query);
@@ -21,7 +22,7 @@
                 $_SESSION['logged_in'] = true;
                   echo"<script language='javascript' type='text/javascript'>
                   alert('Login correto');</script>";
-                  header("Location:../../administracao");
+                  header("Location:../../administracao?data=$date");
                 }
             /*if($row == 1){
                 if($row['SENHA'] == $login_password){

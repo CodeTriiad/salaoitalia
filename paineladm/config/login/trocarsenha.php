@@ -15,9 +15,9 @@ if(isset($_POST['alterarSenha'])){
             SET SENHA = '$senhaNova' 
             WHERE EMAIL = '$email'";
             mysqli_query($mysqli_connection, $consulta);
-            header('location:../../perfil');
+            header('location:../../perfilalterado');
     } else {
-        header('location:../../perfil');
+        header('location:../../perfilfailed');
     }
 }
 

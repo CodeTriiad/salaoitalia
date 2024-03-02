@@ -32,7 +32,7 @@ option {
 }
 
 #navbarzin {
-    background-color: #CE2B37;
+    background-color: #035029;
 }
 
 #item-nav{
@@ -64,13 +64,13 @@ option {
     text-transform: uppercase;
 }
 .navbar .navbar-menu-wrapper {
-    background: #CE2B37;
+    background: #035029;
 
     
 }
 
 .navbar .navbar-brand-wrapper {
-    background: #F1F2F1;
+    background: #CE2B37;
            height: 60px;
    
 }
@@ -88,10 +88,10 @@ option {
     color: rgba(255, 255, 255, 0.7);
 }
 .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link, .sidebar .nav:not(.sub-menu) > .nav-item:hover[aria-expanded=true] {
-    background: #ffffffbe;
+    background: #F1F2F1;
 }
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .nav-link {
-    color: #ffffff;
+    color: #F1F2F1;
 }
 
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .welcome-text {
@@ -100,7 +100,7 @@ option {
     font-weight: normal;
     font-size: 28px;
     line-height: 38px;
-    color: #fffdfd;
+    color: #F1F2F1;
     margin-bottom: 10px;
 }
 
@@ -110,7 +110,7 @@ option {
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    color: #ffffff;
+    color: #F1F2F1;
     margin-bottom: 0;
 }
 
@@ -122,12 +122,12 @@ option {
 }
 
 .navbar .navbar-brand-wrapper .navbar-toggler {
-    color: white;
+    color: #F1F2F1;
 }  
 
 @media(max-width: 390px) {
     .navbar .navbar-brand-wrapper {
-        background: #CE2B37;
+        background: #035029;
         height: 60px;
        
     }
@@ -135,7 +135,7 @@ option {
 
 @media(max-width: 900px) {
     .navbar .navbar-brand-wrapper {
-        background: #CE2B37;
+        background: #035029;
         height: 60px;
        
     }

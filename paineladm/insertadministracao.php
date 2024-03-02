@@ -9,28 +9,36 @@ include_once '../vendor/autoload.php';
                     $ID = $_GET['id'];
                     $concluir = "UPDATE AGENDAMENTO SET STATUS = 'CONCLUIDO' WHERE ID = $ID";
                     mysqli_query($mysqli_connection,$concluir);
-                        header('location:administracao') ;
+                        $fallback = 'administracao';
+                        $anterior = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $fallback;
+                        header("location: {$anterior}");
                     }
 
                 if(isset($_POST['agendar'])){
                     $ID = $_GET['id'];
                     $agendar = "UPDATE AGENDAMENTO SET STATUS = 'AGENDADO' WHERE ID = $ID";
                     mysqli_query($mysqli_connection,$agendar);
-                    header('location:administracao') ;
+                    $fallback = 'administracao';
+                    $anterior = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $fallback;
+                    header("location: {$anterior}");
                     }
 
                 if(isset($_POST['deletar'])){
                     $ID = $_GET['id']; 
                     $deletar_agendamento = "DELETE FROM AGENDAMENTO WHERE ID = $ID";
                     mysqli_query($mysqli_connection,$deletar_agendamento);
-                        header('location:administracao') ;
+                    $fallback = 'administracao';
+                    $anterior = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $fallback;
+                    header("location: {$anterior}");
                     }
 
                 if(isset($_POST['enviado'])){
                     $ID = $_GET['id']; 
                     $enviado = "UPDATE AGENDAMENTO SET ENVIADO = 'S' WHERE ID = $ID";
                     mysqli_query($mysqli_connection,$enviado);
-                        header('location:administracao') ;
+                    $fallback = 'administracao';
+                    $anterior = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $fallback;
+                    header("location: {$anterior}");
                     }
                 
                 if(isset($_POST['faturamentoAnual'])){
@@ -40,6 +48,8 @@ include_once '../vendor/autoload.php';
                     $mes = date('m');
                     $faturamentoAnual = "CALL VENDAS_ANUAL('$mes', $idBarbeiro, '$data-1', '$data-30', $ano)";
                     mysqli_query($mysqli_connection,$faturamentoAnual);
-                    header('location:vendasanual');
+                    $fallback = 'vendasanual';
+                    $anterior = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : $fallback;
+                    header("location: {$anterior}");
                 }
                 ?>
