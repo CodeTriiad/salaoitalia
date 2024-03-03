@@ -3,7 +3,7 @@ include_once('paineladm/config/conexao.php');
 include_once('paineladm/config/function.php');
 
 
-$name = $_POST["name"];
+$name = trim($_POST["name"]);
 $telefone = $_POST["telefone"];
 $barbeiro = $_POST["barbeiro"];
 $servicos = $_POST["servicos"];
