@@ -40,7 +40,7 @@ session_start();
                           <button  class="btn btn btn-info btn-sm font-weight-medium auth-form-btn">FILTRAR </h4>
                        </form>
                          <?php
-                          if(emailBarbeiro() === "adm@codetriad.net"){
+                          if($email === "adm@codetriad.net"){
                           $verifica = mysqli_query($mysqli_connection, 
                           "SELECT ID, NOME,TELEFONE, SERVICO, DATA, HORA, 
                           STATUS,BARBEIRO, ENVIADO FROM AGENDAMENTO
@@ -103,7 +103,7 @@ session_start();
                                           $nome = $row_agendamento['NOME'];
                                           $barbeiro = $row_agendamento['BARBEIRO'];
                                           $hora = $row_agendamento['HORA'];
-                                          $dia = $row_agendamento['DATA'];
+                                          $dia = implode('/', array_reverse(explode('-', $row_agendamento['DATA'])));
                                           $texto = "Sr(a). *".$nome."*,%0DSeu horário está agendado%0D
                                           Pelo Barbeiro: *".$barbeiro."*%0D
                                           Dia: *".$dia."*%0DHorario: *".$hora."*%0D
@@ -177,8 +177,8 @@ session_start();
                                           $nome = $row_agendamento['NOME'];
                                           $barbeiro = $row_agendamento['BARBEIRO'];
                                           $hora = $row_agendamento['HORA'];
-                                          $dia = $row_agendamento['DATA'];
-                                          $texto = "Sr(a). *".$nome."*,%0DSeu horário está agendado%0DPelo Barbeiro: *".$barbeiro."*%0DDia: *".$dia."*%0DHorario: *".$hora."*%0DSe por acaso chegar atrasado, enviar mensagem para o seu barbeiro.";
+                                          $dia = implode('/', array_reverse(explode('-', $row_agendamento['DATA'])));
+                                          $texto = "Sr(a). *".$nome."*,%0DSeu horário está agendado%0DPelo Salão: *".$barbeiro."*%0DDia: *".$dia."*%0DHorario: *".$hora."*%0DSe por acaso chegar atrasado, enviar mensagem para o seu barbeiro.";
                                           if ($iphone || $ipad || $android || $palmpre || $ipod || $berry || $symbian == true) {
                                             $link = "whatsapp://send?phone=55$numero&text=$texto";
                                             } else {

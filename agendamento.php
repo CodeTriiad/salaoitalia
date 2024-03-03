@@ -79,7 +79,7 @@ include_once('paineladm/config/conexao.php');
                     <?php while($servicos = mysqli_fetch_array($QUERY)){ ?>
                     <option value="<?=  $servicos['HORAS'] ?> "style="color: black;"><?php echo $servicos['HORAS'];?>
                     <?php } ?>
-                  </select>
+                    </select>
                   <select name="minutos" class="input-box" required style="color: black;">
                   <?php 
                       $SQL = "SELECT MINUTOS FROM MINUTOS WHERE SITUACAO = 1 ORDER BY MINUTOS ";
