@@ -60,8 +60,7 @@ session_start();
                             INNER JOIN SERVICO S
                             ON S.SERVICOS = A.SERVICO
                             WHERE A.STATUS = 'CONCLUIDO'
-                            AND HM.DATA LIKE '$hoje'
-                            AND A.BARBEIRO = '$nomeBarbeiro'");
+                            AND HM.DATA LIKE '$hoje'");
 
                             $calculo = mysqli_query($mysqli_connection, 
                             "SELECT sum(S.VALOR) AS VALOR FROM AGENDAMENTO_HORA_MINUTO HM
@@ -74,8 +73,7 @@ session_start();
                             INNER JOIN SERVICO S
                             ON S.SERVICOS = A.SERVICO
                             WHERE A.STATUS = 'CONCLUIDO'
-                            AND HM.DATA LIKE '$hoje'
-                            AND A.BARBEIRO = '$nomeBarbeiro'") ;
+                            AND HM.DATA LIKE '$hoje'") ;
                             $soma = mysqli_fetch_assoc($calculo);
                             //Verificar se encontrou resultado na tabela "usuarios"
                             if(($verifica ) AND ($verifica->num_rows != 0))

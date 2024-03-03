@@ -101,12 +101,20 @@ include_once('paineladm/config/conexao.php');
               <!-- Adicione este elemento onde você quer exibir as mensagens de erro -->
               <div id="mensagem-erro" style="color: red;"></div>
 
+            </div></br>
+              <div class="auth-form-light text-left py-4 px-4 px-sm-5">
+                <div id="" style="color: black;">
+                <a><h4 style="font-weight: bold;">Endereço🏠 </h4></a></br>
+                <a style="font-weight: bold;">Bairro:</a> Praia da Costa </br>
+                <a style="font-weight: bold;">Rua:</a> São Paulo </br>
+                <a style="font-weight: bold;">Número:</a> 68</br>
 
+                <a style="font-weight: bold;"> Contato:</a> 27 99832-2265
+                </div>
             </div>
           </div>
         </div>
       </div>
-     
     </div>
   </div>
 </body>
@@ -118,7 +126,6 @@ include_once('paineladm/config/conexao.php');
 });
 
 </script>
-
 </html>
 
             

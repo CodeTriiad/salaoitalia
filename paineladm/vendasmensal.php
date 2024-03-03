@@ -48,8 +48,7 @@ session_start();
                             "SELECT A.DATA AS DATA, VALOR AS VALOR, S.SERVICOS AS SERVICO FROM SERVICO S
                             INNER JOIN AGENDAMENTO A
                             ON A.SERVICO = S.SERVICOS
-                            WHERE A.BARBEIRO = '$nomeBarbeiro'
-                            AND A.STATUS = 'CONCLUIDO'
+                            WHERE A.STATUS = 'CONCLUIDO'
                             AND A.DATA LIKE '$mesano%'
                             ");
 
@@ -57,8 +56,7 @@ session_start();
                             "SELECT SUM(VALOR) AS VALOR, COUNT(A.SERVICO) AS SOMA FROM SERVICO S
                             INNER JOIN AGENDAMENTO A
                             ON A.SERVICO = S.SERVICOS
-                            WHERE A.BARBEIRO = '$nomeBarbeiro'
-                            AND A.STATUS = 'CONCLUIDO'
+                            WHERE A.STATUS = 'CONCLUIDO'
                             AND A.DATA LIKE '$mesano%'") ;
                             $soma = mysqli_fetch_assoc($calculo);
                             //Verificar se encontrou resultado na tabela "usuarios"

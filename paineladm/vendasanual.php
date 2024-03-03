@@ -48,8 +48,7 @@ session_start();
                             "SELECT VA.NOME_MES, VA.TOTAL_VENDA, U.NOME
                             FROM VENDAS_ANUAL VA
                                 INNER JOIN USUARIO U
-                                ON U.ID = VA.ID_BARBEIRO
-                                WHERE U.NOME = '$nomeBarbeiro'");
+                                ON U.ID = VA.ID_BARBEIRO");
                             //Verificar se encontrou resultado na tabela "usuarios"
                             if(($vendasAnual) AND ($vendasAnual->num_rows != 0))
                                 while($row_servico = mysqli_fetch_assoc($vendasAnual)){{?>
